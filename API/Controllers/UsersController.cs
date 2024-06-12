@@ -4,11 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
 namespace API.Controllers;
-
-[ApiController]
-[Route("api/[controller]")] //api/users
-//[controller] kısmı UsersController classının adından ilk kısmı alıp route'a yazıyor. --> UsersController-Controller = Users.
-public class UsersController : ControllerBase
+public class UsersController : BaseApiController
 {
     private readonly DataContext _context;
 
